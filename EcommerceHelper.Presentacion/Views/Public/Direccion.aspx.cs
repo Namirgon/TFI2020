@@ -40,7 +40,7 @@ namespace EcommerceHelper.Presentacion.Views.Public
         public void cargarLocalidades()
         {
             ddLocalidad.DataSource = null;
-            ddLocalidad.DataSource = unasProvincias.Find(X => X.IdProvincia == (int.Parse(ddProvincia.SelectedValue))).misLocalidades;
+            ddLocalidad.DataSource = unasProvincias.Find(X => X.IdProvincia == (Int32.Parse(ddProvincia.SelectedValue))).misLocalidades;
             ddLocalidad.DataValueField = "IdLocalidad";
             ddLocalidad.DataTextField = "Descripcion";
             ddLocalidad.DataBind();
@@ -48,14 +48,13 @@ namespace EcommerceHelper.Presentacion.Views.Public
 
         protected void ddProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
+            
                 int aux = Int32.Parse(ddProvincia.SelectedValue);
                 aux--;
                 cargarProvincias(aux);
                 cargarLocalidades();
 
-            }
+            
         }
 
        
