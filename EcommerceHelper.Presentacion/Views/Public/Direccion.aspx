@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"  MasterPageFile="~/Shared/PaginaMaestra.Master" AutoEventWireup="true" EnableViewState="true" EnableEventValidation="false" CodeBehind="Direccion.aspx.cs" Inherits="EcommerceHelper.Presentacion.Views.Public.Direccion" %>
+﻿<%@ Page Language="C#"  MasterPageFile="~/Shared/PaginaMaestra.Master" AutoEventWireup="true"  EnableEventValidation="false" CodeBehind="Direccion.aspx.cs" Inherits="EcommerceHelper.Presentacion.Views.Public.Direccion" %>
  <%@ MasterType VirtualPath="~/Shared/PaginaMaestra.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -52,14 +52,14 @@
                     <div class="form-group">
                   <br /> 
                   <asp:Label ID="lblProvincia" For="ddProvincia" style="margin-left:100px; color:white" runat="server" Text="Provincia"></asp:Label>  
-                  <asp:DropDownList ID="ddProvincia" ClientIDMode="Static" runat="server" AutoPostBack="True" Width="400px" OnSelectedIndexChanged="ddProvincia_SelectedIndexChanged" >
+                  <asp:DropDownList ID="ddProvincia" runat="server" ClientIDMode="static"   Width="400px" OnSelectedIndexChanged="ddProvincia_SelectedIndexChanged" AutoPostBack="True" >
                   </asp:DropDownList>
                         </div>
                 
                   <br />
              <div class="form-group">
                   <asp:Label ID="lblLocalidad" for="ddLocalidad" style="margin-left:100px; color:white" runat="server" Text="Localidad"></asp:Label>
-                  <asp:DropDownList ID="ddLocalidad" runat="server" Width="400px" ClientIDMode="Static" >
+                  <asp:DropDownList ID="ddLocalidad" runat="server" Width="400px" ClientIDMode="static" >
                   </asp:DropDownList>
                  </div>
                   <br />
