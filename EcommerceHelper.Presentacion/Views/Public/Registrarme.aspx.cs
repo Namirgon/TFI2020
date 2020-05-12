@@ -20,8 +20,12 @@ namespace EcommerceHelper.Presentacion.Views.Public
         private UsuarioEntidad unManagerUsuario = new UsuarioEntidad();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarSexo();
-            CargarTipoTelefono();
+
+            if (!Page.IsPostBack)
+            {
+                cargarSexo();
+                CargarTipoTelefono();
+            }
         }
 
         public void cargarSexo()
