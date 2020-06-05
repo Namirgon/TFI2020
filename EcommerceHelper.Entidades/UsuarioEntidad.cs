@@ -25,6 +25,8 @@ namespace EcommerceHelper.Entidades
 
         public SexoEntidad MiSexo { get; set; }
 
+        public int IdSexo { get; set; }
+
         public List<DireccionEntidad > MiDireccion { get; set; }
 
         public string Email { get; set; }
@@ -33,17 +35,15 @@ namespace EcommerceHelper.Entidades
 
         public TipoTelefonoEntidad MiTelefono { get; set; }
 
+        public int IdTelefono { get; set; }
+
         public int NumeroTelefono { get; set; }
 
+        public int IdUsuarioTipo { get; set; }
         #endregion
     }
 
 
-    //public  RegistrarUsuario(UsuarioEntidad usuario)
-    //{
-
-
-
-    //}
+  
 
 }

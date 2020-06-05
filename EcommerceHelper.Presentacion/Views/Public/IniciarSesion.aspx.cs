@@ -12,10 +12,10 @@ namespace EcommerceHelper.Presentacion.Views.Public
     {
 
         //DAL.NuevaConexion cn = new DAL.NuevaConexion();
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
         public void RealizarLogueo(string elUsuario, string laClave)
         {
@@ -37,7 +37,8 @@ namespace EcommerceHelper.Presentacion.Views.Public
                 EtiquetaPassword.Text = "Ingrese la contraseña";
                 EtiquetaPassword.Visible = true;
             }
-            else {
+            else
+            {
                 Response.Redirect("/Views/Public/NuestrosServicios.aspx");
             }
 
@@ -46,7 +47,7 @@ namespace EcommerceHelper.Presentacion.Views.Public
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            if (TXTEmail.Text==" ")
+            if (TXTEmail.Text == " ")
 
             {
                 EtiquetaEmail.Text = "Ingrese el Email";
@@ -59,26 +60,28 @@ namespace EcommerceHelper.Presentacion.Views.Public
 
                 EtiquetaPassword.Text = "Ingrese la contraseña";
                 EtiquetaPassword.Visible = true;
-            } 
-
-
-            
-                BLL.UsuarioBLL BLLUsuario = new BLL.UsuarioBLL();
-                BLLUsuario.IniciarSesion(TXTEmail.Text, TXTPassword.Text);
-            
-
-            //Response.Redirect("/ Views / Public / NuestrosServicios.aspx");
             }
 
-        protected void TXTPassword_TextChanged(object sender, EventArgs e)
+
+
+            BLL.UsuarioBLL BLLUsuario = new BLL.UsuarioBLL();
+            BLLUsuario.IniciarSesion(TXTEmail.Text, TXTPassword.Text);
+
+            limpiarCampos();
+            Response.Redirect("/Views/Public/NuestrosServicios.aspx");
+            //Response.Redirect("/ Views / Public / NuestrosServicios.aspx");
+        }
+
+        public void limpiarCampos()
         {
-           
+            TXTEmail.Text = string.Empty;
+            TXTPassword.Text = string.Empty;
+
+
         }
 
-       
+
+
     }
-         
-
-           
-        }
+}
     

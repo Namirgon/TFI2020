@@ -176,6 +176,20 @@
     <Compile Include="Shared\PaginaMaestra.Master.designer.cs">
       <DependentUpon>PaginaMaestra.Master</DependentUpon>
     </Compile>
+    <Compile Include="Shared\PaginaMaestraAdministracion.Master.cs">
+      <DependentUpon>PaginaMaestraAdministracion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\PaginaMaestraAdministracion.Master.designer.cs">
+      <DependentUpon>PaginaMaestraAdministracion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\PaginaMaestraCliente.Master.cs">
+      <DependentUpon>PaginaMaestraCliente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\PaginaMaestraCliente.Master.designer.cs">
+      <DependentUpon>PaginaMaestraCliente.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\Private\AltaEmpleado.aspx.cs">
       <DependentUpon>AltaEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -286,6 +300,8 @@
     <None Include="packages.config" />
     <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
     <Content Include="Shared\PaginaMaestra.Master" />
+    <Content Include="Shared\PaginaMaestraCliente.Master" />
+    <Content Include="Shared\PaginaMaestraAdministracion.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
